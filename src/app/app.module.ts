@@ -1,8 +1,11 @@
+import { HttpModule } from '@angular/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { ClarityModule } from 'clarity-angular';
 
 
 import { AppComponent } from './app.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -10,9 +13,12 @@ import { AppComponent } from './app.component';
     AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    HttpModule,
+    ClarityModule.forRoot()
   ],
-  providers: [],
+  providers: [AppComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
